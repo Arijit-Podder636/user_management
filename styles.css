@@ -1,0 +1,247 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f6f8fa;
+    color: #222;
+}
+
+/* Layout */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 16px;
+}
+
+/* Top bar for Dashboard */
+.dashboard-topbar {
+    background: #0b6b63;
+    padding: 12px 0;
+}
+
+.topbar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar-flex h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.topbar-nav a.btn {
+    margin-left: 12px;
+    padding: 6px 12px;
+    background: #fff;
+    color: #0b6b63;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.topbar-nav a.btn:hover {
+    background: #0d7b72;
+    color: #fff;
+}
+
+.topbar-nav a.btn.btn-logout {
+    background: #dc2626 !important; /* bright red */
+    color: white !important;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.topbar-nav a.btn.btn-logout:hover {
+    background: #b91c1c !important; /* darker red on hover */
+}
+
+
+
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+table th,
+table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+table th {
+    background: #0b6b63;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Card/form layout */
+.form-row {
+    background: #fff;
+    padding: 16px;
+    border: 1px solid #ddd;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #0b6b63;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+    background: #0d7b72;
+    transform: translateY(-2px);
+}
+.btn-danger {
+    background: #c0392b;
+}
+.btn-danger:hover {
+    background: #e74c3c;
+}
+
+/* Input fields */
+.input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 6px 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Notice box */
+.notice {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+}
+
+/* Profile picture section */
+table td.profile-pic-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    padding: 0;
+}
+
+.profile-pic-wrapper {
+    display: inline-block;
+    padding: 6px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.profile-pic {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+}
+
+/* Modal (enlarged profile picture) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Close button for modal */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.modal-close:hover {
+    color: #ccc;
+}
+
+button.btn-delete {
+    background: #dc2626; /* red color */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button.btn-delete:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
+}
+
+button.btn-delete i {
+    margin-right: 6px;
+    font-size: 14px;
+}
+
